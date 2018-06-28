@@ -153,7 +153,10 @@ height: 50vh;
 *******************************
 */
 .demoSec {
-  margin-top: 7%; }
+    margin-top: 7%;
+    height: 100vh;
+    background: #ccc;
+}
 .demoSec .demo h5 {
   font-weight: bold;
   text-transform: capitalize;
