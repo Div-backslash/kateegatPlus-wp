@@ -16,55 +16,6 @@ body {
   cursor: context-menu;
   overflow-x: hidden; }
 
-.navbar {
-  line-height: 2.8;
-  position: fixed;
-  width: 100%;
-  background: #fff; }
-.navbar .row {
-  padding-left: 0; }
-.navbar .row .logo {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-weight: bolder;
-  letter-spacing: 3px;
-  font-size: 18px;
-  margin-right: 0;
-  padding-left: 0;
-  text-transform: uppercase; }
-.navbar .row .navbar-nav {
-  margin: auto; }
-.navbar .row .navbar-nav .active {
-  opacity: 1 !important; }
-.navbar .row .navbar-nav .nav-item {
-  opacity: .7; }
-.navbar .row .navbar-nav .nav-item .nav-link {
-  color: #fff;
-  letter-spacing: 1px;
-  margin-right: .7rem;
-  margin-left: .7rem;
-  padding: 0;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  text-transform: capitalize; }
-.navbar .row .nav-item:hover {
-  opacity: 1 !important; }
-.navbar .row button {
-  border: 2px solid #2a5298;
-  padding: 0;
-  color: #2a5298;
-  background: #fff;
-  border-radius: 25px;
-  cursor: pointer;
-  line-height: 2.5;
-  transition: 0.4s;
-  font-family: "Righteous", sans-serif;
-  text-transform: uppercase; }
-.navbar .row button:hover {
-  border: 2px solid #fff;
-  background: transparent;
-  color: #fff; }
-
 .backFace {
   position: relative;
   width: 100%;
@@ -100,7 +51,15 @@ body {
   margin-bottom: 0;
   letter-spacing: 3px;
   word-spacing: 3px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
+.backFace .overlay .portfolio .row h1::after{
+    content: "\f0e7";
+    font-family: FontAwesome;
+    font-size: 25px;
+    font-weight: normal;
+    color: #fff;
+}
 .backFace .overlay .portfolio .row .mx-auto button {
   border: 0;
   padding: 10px 40px;
@@ -125,21 +84,19 @@ body {
 
 
 .cutom-down{
-    font-size: 15vh;
-    margin-top: 10vh;
-    margin-right: 3vh;
+    font-size: 60px;
+    margin-top: 1em;
     color: rgba(255, 255, 255, 0.5);
 }
 
 .cutom-down-two{
-    font-size: 15vh;
-    margin-top: 10vh;
-    margin-right: 3vh;
+    font-size: 60px;
+    margin-top: 1em;
     color: #264a8b;
 }
 .cutom-down-three{
-    font-size: 15vh;
-    margin: 0vh;
+    font-size: 60px;
+    margin: 0 auto;
     color: #264a8b;
 }
 
@@ -185,7 +142,6 @@ height: 50vh;
 */
 .demoSec {
     padding: 7%;
-    height: auto;
 }
 .demoSec .demo h5{
   font-weight: bold;
@@ -378,7 +334,8 @@ h2, .h1 {
 
   /**************************************************************/
   .demoSec {
-    margin-top: 7%; }
+    margin-top: 7%;
+    }
   .demoSec .demo h5 {
     font-size: 14px; }
   .demoSec .demo .mx-auto {
@@ -410,3 +367,64 @@ h2, .h1 {
 /**************/
 
 /*# sourceMappingURL=main.css.map */
+
+
+.navbar_section {
+    overflow: hidden;
+    background-color: #ddd;
+    padding: 2vh;
+}
+
+.navbar-brand{
+    float: left;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #21427c !important;
+    z-index: 2;
+    padding: 2vh;
+}
+.sticky a{
+    color: #ddd !important;
+}
+
+.img-gallery{
+    width: 300px;
+}
+
+.demo-info{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.demo-head{
+    line-height: 2em;
+    letter-spacing: 2px;
+    transition: all .3s ease-in;
+    color: #284f93;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.demo-info p{
+    letter-spacing: 2px;
+    transition: all .3s ease-in;
+    color: #284f93;
+    margin: 5vh;
+    text-align: center; 
+}
+
+h1.demo-head::after {
+    font-family: FontAwesome;
+    content: "\f149";
+    position: relative;
+    left: 12px;
+    font-size: 30px;
+    top: 5px;
+}
+
+
+ 

@@ -16,7 +16,7 @@
         <?php wp_head() ?>
     </head>
 
-    <body>
+    <body data-hijacking="off" data-animation="scaleDown">
         <!-- -------------------------------------- START HEADER -------------------------------------- -->
         <header class="backFace"> <!-- The backFace class is same a portfolio of all header items -->
             <div class="overlay"> <!-- controller of coler -->
