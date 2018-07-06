@@ -48,44 +48,44 @@
     </div>
 </div>
 
-<!-- End Navbar -->      
+<!-- End Navbar -->
+<section class="demoSec">
+    <div class="container">
+        <div class="demo-info">
+            <h1 class="demo-head">Pick up a theme</h1>
+            <p>Also we have free pro themes</p>
+        </div>
+<div class="your-class">
+<?php 
+$args = array( 
+	'post_type' => 'product', 
+	'posts_per_page' => 10 
+	);
 
+$the_query = new WP_Query( $args ); 
 
-<!-- ----------------------------------- START DEMO SECTION ------------------------------ -->
-        <section class="demoSec">
-            <div class="container">
-                <div class="demo-info">
-                    <h1 class="demo-head">Pick up a theme</h1>
-                    <p>Also we have free pro themes</p>
-                </div>
-                <div class="your-class">
-                  <div>
-                    <a href="#">
-                        <img class="img-gallery img-thumbnail img-rounded" src="http://localhost/wordpress/wp-content/themes/kateegat-plus-root/img/work1.jpeg">
-                      </a>
+if ( $the_query->have_posts() ) {
+    while ( $the_query->have_posts() ) { $the_query->the_post(); ?>
+    
+                  <div class="hold-post-type">
+                        <a href="<?php the_permalink(); ?>" class="thumbnail">
+                            <?php the_post_thumbnail('', ['class' => 'img-thumbnail img-custom', 'title' => 'Post Image']) ?>
+                        <div class="overlay-thumbnail">
+                            <div class="text entry-content">
+                                <p>
+                                    <?php the_title(); ?>
+                                </p>
+                            </div>
+                        </div>
+                       </a>
                     </div>
-                  <div>
-                    <a href="#">
-                        <img class="img-gallery img-thumbnail img-rounded" src="http://localhost/wordpress/wp-content/themes/kateegat-plus-root/img/work2.jpeg">
-                      </a>
-                    </div>
-                    <div>
-                    <a href="#">
-                        <img class="img-gallery img-thumbnail img-rounded" src="http://localhost/wordpress/wp-content/themes/kateegat-plus-root/img/work3.jpeg">
-                      </a>
-                    </div>                   
-                    <div>
-                    <a href="#">
-                        <img class="img-gallery img-thumbnail img-rounded" src="http://localhost/wordpress/wp-content/themes/kateegat-plus-root/img/work4.jpeg">
-                      </a>
-                    </div>  
-                    <div>
-                    <a href="#">
-                        <img class="img-gallery img-thumbnail img-rounded" src="http://localhost/wordpress/wp-content/themes/kateegat-plus-root/img/work5.jpeg">
-                      </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ----------------------------------- END DEMO SECTION ------------------------------ -->
+    <?php
+ }
+}else{
+    _e( 'Nothing found!', 'saidweb' ); 
+ }
+?>
+        </div>
+    <?php wp_reset_postdata(); ?>
+    </div>
+</section>

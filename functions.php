@@ -27,9 +27,10 @@ function kateegatplus_styles() {
     wp_enqueue_style( 'kateegatplus-slick-style', get_template_directory_uri() . '/slick/slick.css', array(), true );
     
     wp_enqueue_style( 'kateegatplus-slick-theme-style', get_template_directory_uri() . '/slick/slick-theme.css', array(), true );
+    
         
     wp_enqueue_style( 'kateegatplus-main-style', get_template_directory_uri() . '/css/main.css', array(), true );
-    
+        
 }
 
 add_action( 'wp_enqueue_scripts', 'kateegatplus_styles' );
@@ -48,13 +49,7 @@ wp_enqueue_script('kateegatplus-fancybox-js');
     
 wp_register_script('kateegatplus-slick-js', get_template_directory_uri() . '/slick/slick.min.js', '','', true);
 wp_enqueue_script('kateegatplus-slick-js');
-        
-wp_register_script('kateegatplus-velocity-js', get_template_directory_uri() . '/js/velocity.min.js', '','', true);
-wp_enqueue_script('kateegatplus-velocity-js');
-    
-wp_register_script('kateegatplus-velocityui-js', get_template_directory_uri() . '/js/velocity.ui.min.js', '','', true);
-wp_enqueue_script('kateegatplus-velocityui-js');
-    
+            
 wp_register_script('kateegatplus-main-js', get_template_directory_uri() . '/js/main.js', '','', true);
 wp_enqueue_script('kateegatplus-main-js');
 }
@@ -89,6 +84,42 @@ function custom_add_google_fonts() {
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
+// add featured images support
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size( 300, 300 );
+/** Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+add_theme_support( 'html5', array(
+    'search-form',
+    'comment-form',
+    'comment-list',
+    'gallery',
+    'caption',
+) );
 
+
+function theme_prefix_the_custom_logo() {
+
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
+	}
+
+}
+
+add_filter('get_custom_logo','change_logo_class');
+
+
+function change_logo_class($html)
+{
+	$html = str_replace('custom-logo-link', 'navbar-brand', $html);
+	return $html;
+}
+
+add_theme_support( 'custom-logo' );
+
+// register custom post type to work with
+
+require_once dirname( __FILE__ ) . '/template-parts/custom-theme.php';
 
 ?>

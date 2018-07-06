@@ -6,7 +6,11 @@
                         GET YOUR COPY JUST BY $ </br/>
                         FROM THEMEFOREST </h2>
                 <div class="mx-auto">
-                    <button> PURCHASE </button>
+                    <button>
+                        <a href="#">
+                        PURCHASE
+                        </a>
+                    </button>
                 </div> 
             </div>
     </section>

@@ -32,10 +32,10 @@ $('.your-class').slick({
     centerMode: true,
     autoPlay: true,
     autoplaySpeed: 2000,
-  centerPadding: '10vh',
-  slidesToShow: 3,
-  responsive: [
-    {
+    centerPadding: '10vh',
+    slidesToShow: 2,
+    responsive: [
+        {
       breakpoint: 768,
       settings: {
         arrows: false,
@@ -54,4 +54,35 @@ $('.your-class').slick({
       }
     }
   ]
+});
+
+// the tabs
+$(document).ready(function(){
+    // select tabs ul on click
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+        
+		$('.tab-content').removeClass('current');
+                
+		$(this).addClass('current');
+        
+		$("#"+tab_id).addClass('current');
+        
+        if(
+            $('ul.tabs li.current').css('color', '#21427c'),
+            $('ul.tabs li.current').css('background', '#eee')
+        
+        ) {
+            
+        $(this).css("color", "#555");
+        $(this).css("background", "#ddd"); 
+            
+        }
+        else{        
+        $(this).css("color", "#21427c");  
+        }
+   
+    });
+    
+
 });

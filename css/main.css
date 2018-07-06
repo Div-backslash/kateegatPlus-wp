@@ -12,9 +12,10 @@
 /**************/
 /**************/
 body {
-  font-family: "Roboto", sans-serif !important;
-  cursor: context-menu;
-  overflow-x: hidden; }
+    font-family: 'Raleway', sans-serif !important;
+    cursor: context-menu;
+    overflow-x: hidden;
+}
 
 .backFace {
   position: relative;
@@ -23,10 +24,11 @@ body {
   background: #295197;
   }
 .backFace .overlay {
-  background: -webkit-linear-gradient(#1e3c72, #2a5298);
-  background: -moz-linear-gradient(#1e3c72, #2a5298);
-  background: -o-linear-gradient(#1e3c72, #2a5298);
-  background: linear-gradient(#1e3c72, #2a5298); }
+  background: -webkit-linear-gradient(#1e3c72, rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.3));
+  background: -moz-linear-gradient(#1e3c72, rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.3));
+  background: -o-linear-gradient(#1e3c72, rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.3));
+  background: linear-gradient(#1e3c72, rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.3));
+}
 .backFace .overlay .portfolio {
   height: 100vh;
   display: flex;
@@ -70,7 +72,10 @@ body {
   font-size: 16px;
   transition: 0.5s;
   margin: 10px 20px;
-  border: 2px solid #fff; }
+  border: 2px solid #fff;
+}
+
+
 .backFace .overlay .portfolio .row .mx-auto button:first-of-type {
   background: #fff;
   color: #000; }
@@ -80,7 +85,8 @@ body {
 .backFace .overlay .portfolio .row .mx-auto button:first-of-type:hover {
   background: #fff;
   color: #000;
-  box-shadow: 1px 1px 10px #000; }
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
 
 
 .cutom-down{
@@ -96,13 +102,14 @@ body {
 }
 .cutom-down-three{
     font-size: 60px;
-    margin: 0 auto;
+    margin: 8px auto;
     color: #264a8b;
 }
 
-.cutom-down:hover{
+.cutom-down:hover,
+.cutom-down-three:hover{
     color: #ccc;
-    animation: spinning 2s;
+    animation: spinning 1.5s;
 }
 
 @keyframes spinning {
@@ -188,7 +195,7 @@ height: 50vh;
 */
 .buySec {
     padding: 7%;
-    background: linear-gradient(#1e3c72, #2a5298 100%);
+    background: linear-gradient(rgba(52, 79, 127, 0.6),rgba(33, 63, 114, 0.8),rgba(30, 60, 114, 1));
     height: 100%;
 }
 .buySec h5 {
@@ -371,8 +378,9 @@ h2, .h1 {
 
 .navbar_section {
     overflow: hidden;
-    background-color: #ddd;
+    background-color: #eee;
     padding: 2vh;
+    border-bottom: 1px solid rgba(37, 74, 139, 0.5);
 }
 
 .navbar-brand{
@@ -383,7 +391,7 @@ h2, .h1 {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #21427c !important;
+    background:rgba(30, 60, 114, 0.9);
     z-index: 2;
     padding: 2vh;
 }
@@ -428,3 +436,281 @@ h1.demo-head::after {
 
 
  
+
+/* Style tabs */
+
+.main-tabs{
+    height: 475px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(to right ,rgba(31, 62, 118, 7), rgba(31, 62, 118,0.4));
+    border-bottom: 1px solid rgba(38, 75, 140, 0.5);
+    box-shadow: 1px -1px 7px 1px #aaa;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+ul.tabs{
+    background: #eee;
+    margin: auto;
+    padding: 0px;
+    list-style: none;
+    margin-bottom: 0px;
+    border-left: 1px solid rgba(38, 75, 140, 0.5);
+    border-right: 1px solid rgba(38, 75, 140, 0.5);
+}
+ul.tabs li{
+    background: none;
+    color: #21427c;
+    display: inline-block;
+    padding: 15px 15px;
+    cursor: pointer;
+    width: 20%;
+    height: 81px;
+    line-height: 3em;
+    transition: all .5s ease-out;
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+ul.tabs li:hover {
+    background: rgba(31, 62, 118, 0.1);
+    color: #000;
+}
+
+ul.tabs li.current{
+    color: #21427c;
+    background: #ddd;
+}
+
+.tab-content{
+    display: none;
+    padding: 21px;
+    color: rgba(38, 75, 140, 0.8);
+    position: relative;
+    top: 7vh;
+    font-size: 25px;
+    letter-spacing: 1px;
+    background: #eee;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+/* tabs media */
+
+@media only screen and (max-width: 900px) {
+    body {
+        background-color: lightblue;
+    }
+  
+  ul.tabs li{
+    width: auto;
+  }
+    .main-tabs{
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  ul.tabs li{
+    width: 41.5%;
+    margin: auto;
+  }
+    
+    .main-tabs{
+        width: 100%;
+        height: 500px;
+    }
+  
+  .tab-content{
+    font-size: 16px;
+    line-height: 2em;
+    letter-spacing:1px
+  }
+}
+
+.i-tab{
+    font-size: 28px;
+    margin-right: 14px;
+}
+
+.tab-head{
+    padding: 25px;
+    color: #ccc;
+    font-family: "Righteous", sans-serif;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.51);
+    letter-spacing: 2px;
+}
+
+.tags{
+    background: #fff;
+    margin-left: 14px;
+    margin-right: 14px;
+    color: #999;
+}
+
+.t-icons{
+    line-height: 1.5em;
+    margin-right: 5px;
+}
+.hold-post-type{
+    position: relative;
+    padding: 12px;
+}
+.img-custom{
+}
+.overlay-thumbnail{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90%;
+    width: 93%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 140, 186, 0.5);
+    margin: auto;
+}
+
+.overlay-thumbnail:hover{
+    opacity: .8 !important;
+}
+.entry-content{    
+    position: absolute;
+    top: 85%;
+    left: 50%;
+}
+
+
+.entry-content p{
+    font-size: 32px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    position: relative;
+    bottom: 79px;
+    letter-spacing: 7px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-weight: 900;
+}
+
+/* Cloud */
+
+hr.style-five {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+hr.style-five:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
+}
+
+.down-middle-arrow{
+    float: right;
+    position: relative;
+    bottom: 58px;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.custom-middle-down{
+    color: rgba(33, 66, 124, 0.51);
+        font-size: 60px;
+}
+
+/* contact us */
+/* from codepen
+https://codepen.io/DexOne/pen/gKJGXr?editors=1100
+*/
+#contact {
+	background:#eee;
+	padding:25px;
+	margin:50px 0;
+}
+
+#contact h3 {
+	color: #F96;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+    background: linear-gradient(to right ,rgba(31, 62, 118, .7), rgba(0, 0, 0, 0.1));
+    margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+    resize:none;
+}
+
+#contact button[type="submit"] {
+    cursor: pointer;
+    width: 17%;
+    border: none;
+    background: none;
+    color: #5f749b;
+    padding: 10px;
+    font-size: 19px;
+    margin: auto;
+    float: right;
+}
+
+#contact button[type="submit"]:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#ddd;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+
+
+.themepage{
+    background: #ccc;
+}
+
