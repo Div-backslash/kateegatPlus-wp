@@ -31,13 +31,13 @@
             </ul>
             <div class="icon-social">
                 <a href="<?php echo of_get_option('insta_fixedtop', 'no-entry') ?>" target="_blank">
-                    <i class="fa fa-facebook"></i>
+                    <i class="fab fa-facebook"></i>
                 </a>
                 <a href="<?php echo of_get_option('fb_fixedtop', 'no-entry') ?>" target="_blank">
-                    <i class="fa fa-instagram"></i>
+                    <i class="fab fa-instagram"></i>
                 </a>
                 <a id="whatsup" href="" target="_blank">
-                    <i class="fa fa-whatsapp"></i>
+                    <i class="fab fa-whatsapp"></i>
                 </a>
                 <span></span>
                 <div id="whatsholder" style="display:none">
@@ -52,7 +52,9 @@
 <section class="demoSec">
     <div class="container">
         <div class="demo-info">
-            <h1 class="demo-head">Pick up a theme</h1>
+            <h1 class="demo-head">Pick up a theme
+            <i class="fas fa-long-arrow-alt-down pick_arrow"></i>
+            </h1>
             <p>Also we have free pro themes</p>
         </div>
 <div class="your-class">

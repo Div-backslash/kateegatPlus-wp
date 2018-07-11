@@ -19,16 +19,12 @@ load_template( $optionsfile );
 \*------------------------------------*/
 function kateegatplus_styles() {
     wp_enqueue_style( 'kateegatplus-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), true );
-
-    wp_enqueue_style( 'kateegatplus-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
-    
+        
     wp_enqueue_style( 'kateegatplus-fancybox', get_template_directory_uri() . '/css/jquery.fancybox.min.css');
             
     wp_enqueue_style( 'kateegatplus-slick-style', get_template_directory_uri() . '/slick/slick.css', array(), true );
     
-    wp_enqueue_style( 'kateegatplus-slick-theme-style', get_template_directory_uri() . '/slick/slick-theme.css', array(), true );
-    
-        
+    wp_enqueue_style( 'kateegatplus-slick-theme-style', get_template_directory_uri() . '/slick/slick-theme.css', array(), true );               
     wp_enqueue_style( 'kateegatplus-main-style', get_template_directory_uri() . '/css/main.css', array(), true );
         
 }
@@ -43,6 +39,9 @@ wp_enqueue_script('kateegatplus-jquery');
     
 wp_register_script('kateegatplus-bootsrtap-js', get_template_directory_uri() . '/js/bootstrap.min.js', '','', true);
 wp_enqueue_script('kateegatplus-bootsrtap-js');
+    
+wp_register_script('kateegatplus-fontawesome5-js', get_template_directory_uri() . '/js/fontawesome5.js', '','', true);
+wp_enqueue_script('kateegatplus-fontawesome5-js');
     
 wp_register_script('kateegatplus-fancybox-js', get_template_directory_uri() . '/js/jquery.fancybox.min.js', '','', true);
 wp_enqueue_script('kateegatplus-fancybox-js');
@@ -78,8 +77,6 @@ function custom_add_google_fonts() {
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
-
-
 
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
@@ -118,8 +115,21 @@ function change_logo_class($html)
 
 add_theme_support( 'custom-logo' );
 
+
+/*
+Plugin Name: Get Rid of Comment Websites
+*/
+function my_custom_comment_fields( $fields ){
+  if(isset($fields['url']))
+    unset($fields['url']);
+  return $fields;
+}
+
+add_filter( 'comment_form_default_fields', 'my_custom_comment_fields' );
+
 // register custom post type to work with
 
 require_once dirname( __FILE__ ) . '/template-parts/custom-theme.php';
-
+require_once dirname( __FILE__ ) . '/template-parts/custom-taxonomy.php';
+require_once dirname( __FILE__ ) . '/template-parts/breadcrumb.php';
 ?>

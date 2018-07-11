@@ -48,7 +48,7 @@
 						<ul class="down-arrow">
                             <li class="">
                                 <a id="down" class="" href="#" data-scroll="down_section">
-                                    <i id="" class="cutom-down fa fa-angle-double-down fw">
+                                    <i id="" class="cutom-down fas fa-angle-double-down fw">
 									</i>
                                 </a>
                             </li>

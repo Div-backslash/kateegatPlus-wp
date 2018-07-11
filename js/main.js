@@ -38,7 +38,7 @@ $('.your-class').slick({
         {
       breakpoint: 768,
       settings: {
-        arrows: false,
+        arrows : false,
         centerMode: true,
         centerPadding: '40px',
         slidesToShow: 1
@@ -86,3 +86,6 @@ $(document).ready(function(){
     
 
 });
+
+
+window.FontAwesomeConfig.searchPseudoElements = true;

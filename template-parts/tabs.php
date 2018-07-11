@@ -3,19 +3,19 @@
     <h2 class="tab-head">Here What We can Offer</h2>
 	<ul class="tabs">
 		<li class="tab-link" data-tab="tab-1">
-            <i class="fa fa-flash i-tab"></i>
+            <i class="fas fa-bolt i-tab"></i>
             Speed
         </li>
 		<li class="tab-link" data-tab="tab-2">
-            <i class="fa fa-cogs i-tab"></i>
+            <i class="fas fa-cogs i-tab"></i>
             Tab Two
         </li>
 		<li class="tab-link" data-tab="tab-3">
-            <i class="fa fa-paint-brush i-tab"></i>
+            <i class="fas fa-paint-brush i-tab"></i>
             Tab Three
         </li>
 		<li class="tab-link" data-tab="tab-4">
-            <i class="fa fa-line-chart i-tab"></i>
+            <i class="fas fa-chart-line i-tab"></i>
             Tab Four
         </li>
 	</ul>
